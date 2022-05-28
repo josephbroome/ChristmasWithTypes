@@ -4,6 +4,8 @@ namespace ChristmasWithTypes
 {
     class Program
     {
+        public static object relativename { get; private set; }
+
         static void Main(string[] args)
         {
             var xmas = new Christmas();
@@ -29,6 +31,13 @@ namespace ChristmasWithTypes
             }
 
             Console.WriteLine($"\n We like to call Santa, {xmas.Santa}");
+
+            xmas.relativename = new string[4]{ "Uncle Michael", "Uncle Howard", "Auntie Gwen", "Uncle Greg" };
+
+            foreach (var present in xmas.relativename)
+            {
+                Console.WriteLine($"   {relativename}");
+            }
         }
     }
 }
